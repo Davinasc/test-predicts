@@ -1,0 +1,17 @@
+<form class="form-horizontal" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div formArrayName="data">
+    <div *ngFor="let prod of form.get('data')['controls']; index as i" class="form-group">
+      <div [formGroup]="prod">
+        <div class="col-md-2">
+          <label for="prod" class="control-label">Produto</label>
+        </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control" formControlName="descricao" id="prod" placeholder="Digite o nome">
+        </div>
+        <div class="col-md-4 pull-right">
+          <button type="submit" class="btn btn-primary">Predict!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
