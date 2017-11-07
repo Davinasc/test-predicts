@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, DoCheck } from '@angular/core';
+import { Component, OnChanges, OnInit, Input, Output, EventEmitter, DoCheck } from '@angular/core';
 import { Http } from '@angular/http';
 import { FormGroup, FormControl, FormBuilder, FormArray, Validators } from '@angular/forms';
 
@@ -11,7 +11,7 @@ import { Prediction } from '../model/prediction';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent implements OnInit, DoCheck  {
+export class FormComponent implements OnInit, DoCheck, OnChanges  {
 
   form: FormGroup;
   @Input() predict: Prediction;
@@ -38,6 +38,10 @@ export class FormComponent implements OnInit, DoCheck  {
 
   ngDoCheck() {
     this.predictChange.next(this.predict);
+  }
+
+  ngOnChanges() {
+
   }
 
 }

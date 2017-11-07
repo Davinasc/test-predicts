@@ -1,25 +1,23 @@
 <div *ngIf="predict" >
-  <h3>Parabéns! Aqui está sua Predição</h3>
+  <h3><b>Parabéns!</b> Aqui está sua Predição</h3>
   <p>
-    <b>Descrição:</b> {{ predict[0].descricao }}</p>
-  <p>
-    <b>Probabilidades</b>
+    Possíveis Gêneros para: <b>{{ predict[0].descricao }}</b>
   </p>
   <ol>
     <li>
-      <p>Genero: {{ predict[0].predicao.top1.genero }}</p>
+      <p>{{ predict[0].predicao.top1.genero }}</p>
     </li>
     <li>
-      <p>Genero: {{ predict[0].predicao.top2.genero }}</p>
+      <p>{{ predict[0].predicao.top2.genero }}</p>
     </li>
     <li>
-      <p>Genero: {{ predict[0].predicao.top3.genero }}</p>
+      <p>{{ predict[0].predicao.top3.genero }}</p>
     </li>
     <li>
-      <p>Genero: {{ predict[0].predicao.top4.genero }}</p>
+      <p>{{ predict[0].predicao.top4.genero }}</p>
     </li>
     <li>
-      <p>Genero: {{ predict[0].predicao.top5.genero }}</p>
+      <p>{{ predict[0].predicao.top5.genero }}</p>
     </li>
   </ol>
 </div>
